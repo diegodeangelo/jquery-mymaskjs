@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jquery MyMask Plugin</title>
+		<meta charset="UTF-8">
+
+		<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"></script>
+		<script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+		<script src="../jquery-mymask.js"></script>
+		<script>
+			function teste(el){
+				console.log(el);
+			}
+
+			$(document).ready(function(){
+				$(".registro").mymask();
+			});
+		</script>
+	</head>
+	<body>
+		<form class="registro">
+			<input type="text" name="teste1" id="teste1" data-type='{"type": "cpf", "onComplete": "teste"}'>
+			<input type="email" name="teste1" id="teste1" data-type="cpf">
+		</form>
+		<form class="registro">
+			<input type="text" name="teste1" id="teste1" data-type='cep'>
+			<input type="email" name="teste1" id="teste1" data-type="celular">
+		</form>
+	</body>
+</html>
